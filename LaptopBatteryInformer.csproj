@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Authors>𝔸𝕝𝕖𝕩 𝕂𝕠𝕟𝕠𝕡𝕖𝕝𝕜𝕠</Authors>
+        <TargetFramework>net48</TargetFramework>
+        <LangVersion>Latest</LangVersion>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Version>1.0.0</Version>
+    </PropertyGroup>
+
+</Project>
