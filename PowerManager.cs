@@ -107,19 +107,37 @@ namespace LaptopBatteryInformer
         }
 
         /// <summary>
-        /// Runs the specified request interval.
+        /// Runs checking a Battery info with the specified request interval.
         /// </summary>
         /// <param name="requestInterval">The request interval.</param>
         /// <returns></returns>
         public bool Run(int requestInterval)
         {
-            if (_timer != null) return false;
+            if (_timer != null && !_isPause) return false;
+
+            if (_isPause)
+            {
+                _timer.Interval = requestInterval;
+                _timer.Start();
+                return true;
+            }
 
             _timer = new(requestInterval);
             _timer.Elapsed += Timer_Elapsed;
             _timer.Start();
 
             return true;
+        }
+
+        private bool _isPause = false;
+        /// <summary>
+        /// Pauses of checking a Battery info.
+        /// </summary>
+        public void Pause()
+        {
+            if (_isPause || _timer == null) return;
+
+            _timer.Stop();
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e) =>

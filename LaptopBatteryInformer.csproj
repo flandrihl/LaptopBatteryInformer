@@ -6,6 +6,8 @@
         <LangVersion>Latest</LangVersion>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
         <Version>1.0.0</Version>
+        <Description>Gets info of 🔋 in a Laptop.</Description>
+        <Title>LaptopBatteryInformer</Title>
     </PropertyGroup>
 
 </Project>
