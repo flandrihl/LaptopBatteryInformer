@@ -44,7 +44,7 @@ namespace LaptopBatteryInformer
         /// <value>
         /// The current Instance.
         /// </value>
-        public PowerManager Current => CurrentPowerManager.Value;
+        public static PowerManager Current => CurrentPowerManager.Value;
 
         private ACLineStatus? _acLineStatus;
         /// <summary>
